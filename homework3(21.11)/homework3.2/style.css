@@ -1,0 +1,45 @@
+body {
+    margin: 20px;
+}
+
+input + span {
+    height: 80px;
+    width: 80px;
+    display: block;
+}
+
+input {
+    display: none;
+}
+
+input.cat01:checked + span  {
+    background: url("img/cat01.jpg") no-repeat;
+}
+
+input.cat02:checked + span  {
+    background: url("img/cat02.jpg") no-repeat;
+}
+
+input.cat03:checked + span  {
+    background: url("img/cat03.jpg") no-repeat;
+}
+
+input.cat04:checked + span  {
+    background: url("img/cat04.jpg") no-repeat;
+}
+
+input.cat05:checked + span  {
+    background: url("img/cat04.jpg") no-repeat;
+}
+
+input.cat06:checked + span  {
+    background: url("img/cat06.png") no-repeat;
+}
+
+input.cat07:checked + span  {
+    background: url("img/cat07.jpg") no-repeat;
+}
+
+input.cat08:checked + span  {
+    background: url("img/cat08.jpg") no-repeat;
+}
