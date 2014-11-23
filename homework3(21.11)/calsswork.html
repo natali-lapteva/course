@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        textarea {
+            resize: none;
+            font-family: 'Times New Roman', Times, Serif;
+            font-size: larger;
+        }
+        div {
+            font-family: Tahoma, serif;
+        }
+    </style>
+</head>
+<body>
+<!--<iframe src="http://e1.ru"></iframe>-->
+<form action="http://" method="get" target="_top">
+    <input type="text" size="15" readonly maxlength="10" value="" placeholder="Привет"> <!--только чтение-->
+    <!--Поле ввода в 1 строку--><!--Сначала показывается value-->
+    <hr/>
+    <input type="password" disabled size="15" maxlength="10"><!--поле не доступно--><!--Поле для пароля-->
+    <hr/>
+    <input type="file" multiple="multiple"> <!--Стандарт записи: имя атрибута равно его значению -->
+    <hr/>
+    <input type="checkbox" value="la la"> lalala <!--Не поддается zoom-->
+    <input id="cb1" type="checkbox" value="la la" checked> lalala <!--Не поддается zoom-->
+    <hr/>
+    <input name="text1" type="radio" value="la la"> lalala <!--Выбран только 1 штучка с одним name-->
+    <input name="text1" type="radio" value="la la" checked> lalala <!--Могут находится в разных частях страницы-->
+    <input name="text1" type="radio" value="la la"> lalala
+    <hr/>
+    <textarea rows="2" cols="20"></textarea>
+    <hr/>
+    <select multiple size="8"><!--Выбадающий список-->
+        <option>1234567890</option>
+        <option selected>12345</option>
+        <!--будет выбран по умолчанию-->
+        <option>lala</option>
+        <option>lala</option>
+        <option>lala</option>
+        <option disabled>lala</option>
+    </select>
+    <hr/>
+    <input type="submit"> <!--Кнопка отправить. Отправляет данные той формы, в которой лежит-->
+</form>
+<hr/>
+<div> HTML5 - инпуты:
+    <hr/>
+    <input type="date">
+    <input type="color">
+</div>
+
+</body>
+</html>

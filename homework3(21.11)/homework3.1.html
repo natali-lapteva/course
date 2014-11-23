@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Простая форма</title>
+    <style>
+        #wrapper {
+            margin: 0;
+            background-color: #cccccc;
+            font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+        }
+
+        #head {
+            text-align: left;
+            width: 900px; /*ширина*/
+            height: 100px; /*высота*/
+            margin: 0;
+        }
+
+        #tableBody {
+            background-color: white;
+            text-align: left;
+            width: 900px;
+            display: table;
+            margin: 0;
+        }
+
+        h3 {
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 0;
+        }
+
+        h1 {
+            margin-top: 0;
+            padding: 30px 10px 20px;
+        }
+
+        hr {
+            margin: 30px 20px 30px 20px;
+        }
+
+        .tablePart {
+            margin: 20px;
+            width: 850px;
+            display: table;
+        }
+
+        .tablePartElementLeft {
+            display: table-cell;
+            width: 257px;
+            height: 22px;
+        }
+
+        .tablePartElementRight {
+            display: table-cell;
+        }
+    </style>
+</head>
+<body style="margin: 0">
+<div id="wrapper" align="center">
+    <div id="head">
+        <h1>Расчет по страховым взносам (РСВ-1)</h1>
+    </div>
+    <div id="tableBody" align="center">
+        <h3>Реквизиты формы</h3>
+        <hr/>
+        <div class="tablePart" align="left">
+            <div class="tablePartElementLeft" align="left">Вид документа документа</div>
+            <div class="tablePartElementRight">
+                <input type="radio" name="radio1" id="radio1First"><label for="radio1First">Первичный</label>
+                <br/>
+                <input type="radio" name="radio1" id="radio1Second" checked><label for="radio1Second">Корректирующий</label>
+           </div>
+        </div>
+        <div class="tablePart" align="left">
+            <div class="tablePartElementLeft">Номер корректировки</div>
+            <div class="tablePartElementRight">
+                <input id="roomCorrection" type="text" size="4" value="0" disabled><label for="roomCorrection"></label>
+            </div>
+        </div>
+        <div class="tablePart">
+            <div class="tablePartElementLeft">Тип корректировки</div>
+            <div class="tablePartElementRight">
+                <label>
+                    <input type="radio" name="radio2" disabled>
+                </label>1 - Уточнение уплаты взносов на обязательное пенсионное
+                страхование
+                <br/>
+                <label>
+                    <input type="radio" name="radio2" disabled>
+                </label>2 - Уточнение начисленных взносов на обязательное пенсионное
+                страхование
+                <br/>
+                <label>
+                    <input type="radio" name="radio2" disabled>
+                </label>3 - Уточнение взносов на ОМС или других показателей, кроме
+                сведений по сотрудникам
+            </div>
+        </div>
+        <div class="tablePart">
+            <div class="tablePartElementLeft">Код тарифа</div>
+            <div class="tablePartElementRight">
+                <label>
+                    <select>
+                        <option>01 22% Уплачивающие по основному тарифу</option>
+                        <option>52 22% Уплачивающие по основному тарифу и находящиеся на УСН</option>
+                        <option>53 22% Уплачивающие по основному тарифу и единый налог на вмененный доход</option>
+                        <option>18 21% Сельскохозяйственные товаропроизводители</option>
+                        <option>19 21% Организации народных художественных промыслов</option>
+                        <option>20 21% Семейные (родовые) общины коренных малочисленных народов...</option>
+                        <option>03 21% Общественные организации инвалидов</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+        <hr/>
+        <div class="tablePart">
+            <div class="tablePartElementLeft"><label for="numberInsuredPersons">Количество застрахованных лиц</label></div>
+            <div class="tablePartElementRight">
+                <input id="numberInsuredPersons" type="text" size="6">
+            </div>
+        </div>
+        <div class="tablePart">
+            <div class="tablePartElementLeft"><label for="averageNumber">Среднесписочная численность<br/>работников</label></div>
+            <div class="tablePartElementRight">
+                <input id="averageNumber" type="text" size="6">
+            </div>
+        </div>
+        <div class="tablePart">
+            <div class="tablePartElementLeft"><label for="dateSignature">Дата подписания</label></div>
+            <div class="tablePartElementRight">
+                    <input id="dateSignature" type="date">
+            </div>
+        </div>
+        <div class="tablePart">
+            <div class="tablePartElementLeft"><label for="numberSheetsApplication">Количество листов приложения</label></div>
+            <div class="tablePartElementRight">
+                <input id="numberSheetsApplication" type="text" value="0" size="6">
+            </div>
+        </div>
+        <hr/>
+        <div class="tablePart" style="margin-top: 0; margin-bottom: 0"><strong>Подтверждает достоверность и полноту сведений</strong></div>
+        <div class="tablePart" style="margin-top: 0;">
+            <input id="payerInsurancePremiums" type="radio" name="radio3"><label for="payerInsurancePremiums">Плательщик страховых взносов (руководитель)</label>
+            <br/>
+            <input id="representativePayerInsurancePremiums" type="radio" name="radio3"><label for="representativePayerInsurancePremiums">Представитель плательщика страховых взносов</label>
+            <br/>
+            <input id="assignee" type="radio" name="radio3"><label for="assignee">Правопреемник</label>
+            </div>
+        <hr/>
+        <div class="tablePart">
+            <input id="organizationCeasesActivities" type="checkbox"><label for="organizationCeasesActivities">Организация прекращает свою деятельность</label>
+        </div>
+    </div>
+</div>
+</body>
+</html>
