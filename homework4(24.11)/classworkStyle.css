@@ -1,0 +1,36 @@
+p {
+    font-family: Tahoma, sans-serif;
+    font-weight: normal;
+    height: 600px;
+    width: 600px;
+    text-align: justify;
+    color: #000000;
+    white-space: inherit; /**/
+    /*font-style: italic;*/
+    text-indent: 3%;
+    /*=====*/
+    padding: 10px;
+    margin: 0;
+    /*border: solid;*/
+    background: #cccccc;
+    background-image: url("http://28oi.ru/uploads/assets/items/7/714d4a2592841e1777dc160c3af2c70443bd596f.jpg"); /*можно несколько картинок через зпт*//*
+    background-position: center;
+    background-repeat: no-repeat;*/
+    background-size: 100% 100%; /*можно переопределить размеры картинки*/
+    /*background-clip: border-box;*/
+    border-radius: 50px/20px; /*работает для фона, не только для рамки*/
+    box-shadow: 0 0 20px #000000;
+}
+
+#first {
+    display: inline;
+    line-height: normal;
+    border: 1px solid red;
+    padding: 10px 20px;
+    margin: 50px;
+}
+
+#second {
+    display: block;
+    margin-top: 20px;
+}
