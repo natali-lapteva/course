@@ -3,72 +3,72 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>BatteryMedium</title>
+    <link rel="icon" href="http://s1.iconbird.com/ico/0612/GooglePlusInterfaceIcons/w128h1281338911315batteryhalf.png">
     <style>
-        #bar {
+        #battery {
+            display: table;
             border: 3px solid #000;
-            height: 189px;
-            width: 540px;
-        }
-        .item {
-            width: 45px;
-            display: inline-block;
-            height: 90%;
-            border: 1px solid #000;
-            margin: 2px;
-        }
-        .elementOfBar {
-            display: inline-block;
-            background: #fff;
-            height: 100%;
-            /*margin: 2px;*/
-        }
-        .elementOfBar:hover {
-            background: #7B7B7B;
+            height:264px;
+            min-width: 510px;
         }
         #finish {
-            background: #000000;
             position: relative;
-            top: -150px;
-            left: 540px;
+            left: 516px;
+            bottom: 195px;
+            background: #000;
+            height: 125px;
             width: 30px;
-            height: 100px;
-            display: inline-block;
+        }
+        .item {
+            display: table-cell;
+            height: 260px;
+            width: 30px;
+            margin: 1px;
+            border: 1px solid #000;
+            float: right;
+        }
+
+        .red:hover,
+        .red:hover ~ .red{
+            background: red;
+        }
+
+        .yellow:hover {
+            background: yellow;
+        }
+        .yellow:hover ~ .red,
+        .yellow:hover ~ .yellow {
+            background: yellow;
+        }
+
+        .green:hover {
+            background: green;
+        }
+        .green:hover ~ .yellow,
+        .green:hover ~ .red,
+        .green:hover ~ .green {
+            background: green;
         }
     </style>
 </head>
 <body>
-<div id="bar">
-    <div class="elementOfBar">
-        <div class="item"></div>
-        <div class="elementOfBar">
-            <div class="item"></div>
-            <div class="elementOfBar">
-                <div class="item"></div>
-                <div class="elementOfBar">
-                    <div class="item"></div>
-                    <div class="elementOfBar">
-                        <div class="item"></div>
-                        <div class="elementOfBar">
-                            <div class="item"></div>
-                            <div class="elementOfBar">
-                                <div class="item"></div>
-                                <div class="elementOfBar">
-                                    <div class="item"></div>
-                                    <div class="elementOfBar">
-                                        <div class="item"></div>
-                                        <div class="elementOfBar">
-                                            <div class="item"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="finish"></div>
+<div id="battery">
+    <div class="item green"></div>
+    <div class="item green"></div>
+    <div class="item green"></div>
+    <div class="item green"></div>
+    <div class="item green"></div>
+    <div class="item yellow"></div>
+    <div class="item yellow"></div>
+    <div class="item yellow"></div>
+    <div class="item yellow"></div>
+    <div class="item yellow"></div>
+    <div class="item red"></div>
+    <div class="item red"></div>
+    <div class="item red"></div>
+    <div class="item red"></div>
+    <div class="item red"></div>
 </div>
+<div id='finish'></div>
 </body>
 </html>
